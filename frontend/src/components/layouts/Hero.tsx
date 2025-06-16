@@ -1,22 +1,30 @@
+import { Link } from "react-router";
 import { Button } from "../ui/Button";
+import { Text } from "../ui/Text";
+import { Header } from "./Header";
 
 export const Hero = () => {
   return (
-    <section className="min-h-[80vh] text-center py-8">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4">
+    <section className="min-h-[80vh] text-center px-5">
+      <Header />
+      <Text variant="header" className="pt-24">
         Développeur Full-Stack freelance
-      </h1>
-      <p className="text-lg md:text-xl text-gray-400 mb-6 px-5">
+      </Text>
+      <Text className="my-8 md:text-2xl text-lg">
         Spécialisé Spring Boot & React/React Native, j’aide les équipes tech à
         structurer, fiabiliser et faire évoluer leurs apps web & mobiles.
-      </p>
+      </Text>
 
       <div className="flex flex-wrap gap-4 justify-center">
-        <Button link route="/app" varient="primary">
-          voir mes services
+        <Button>
+          <Link to="#" className="py-2">
+            Voir mes services
+          </Link>
         </Button>
-        <Button link varient="outline">
-          Me contacter
+        <Button variant="outline">
+          <Link to="#" className="py-2">
+            Me contacter
+          </Link>
         </Button>
       </div>
     </section>
